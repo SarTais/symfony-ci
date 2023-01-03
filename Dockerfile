@@ -92,7 +92,7 @@ RUN echo 'php -dxdebug.client_host=$REMOTE_HOST $@' > /usr/local/bin/php_debug \
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     chmod +x /usr/local/bin/composer && \
-    composer self-update --1
+    composer self-update --2
 
 # Node.js
 RUN curl -sL https://deb.nodesource.com/setup_14.x -o node_setup.sh && \
