@@ -49,7 +49,6 @@ RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
     php8.0-cli \
     php8.0-amqp \
     php8.0-apcu \
-    php-apcu-bc \
     php8.0-opcache \
     php8.0-memcached \
     php8.0-curl \
@@ -76,8 +75,6 @@ RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
     php8.0-gmp \
     php8.0-ldap \
     php8.0-bcmath \
-    php-geoip \
-    php-gmagick \
     php8.0-xdebug \
     && apt-get autoremove -y \
     && apt-get clean
