@@ -35,12 +35,8 @@ RUN apt-get update && \
     sudo \
     unzip \
     wget \
-    zip
-
-# Git
-RUN add-apt-repository ppa:git-core/ppa && \
-    apt-get update && \
-    apt-get install -y git
+    zip \
+    git
 
 # PHP
 RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
