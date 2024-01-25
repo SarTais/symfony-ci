@@ -35,7 +35,8 @@ RUN apt-get update && \
     sudo \
     unzip \
     wget \
-    zip
+    zip \
+    git
 
 # Git
 RUN add-apt-repository ppa:git-core/ppa && \
