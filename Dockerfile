@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
 # Arguments
 ARG USER_ID=1000
