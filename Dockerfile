@@ -42,45 +42,44 @@ RUN apt-get update && \
 RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
     apt-get update && \
     apt-get install -y \
-    php8.4-fpm \
-    php8.4-common \
-    php8.4-dev \
-    php8.4-cli \
-    php8.4-amqp \
-    php8.4-apcu \
-    php8.4-opcache \
-    php8.4-memcached \
-    php8.4-curl \
-    php8.4-ctype \
-    php8.4-iconv \
-    php8.4-tokenizer \
-    php8.4-mbstring \
-    php8.4-imap \
-    php8.4-xml \
-    php8.4-simplexml \
-    php8.4-xmlwriter \
-    php8.4-xmlrpc \
-    php8.4-xsl \
-    php8.4-zip \
-    php8.4-bz2 \
-    php8.4-posix \
-    php8.4-intl \
-    php8.4-pdo \
-    php8.4-mysql \
-    php8.4-pgsql \
-    php8.4-sqlite3 \
-    php8.4-soap \
-    php8.4-gd \
-    php8.4-gmp \
-    php8.4-ldap \
-    php8.4-bcmath \
-    php8.4-xdebug \
+    php8.5-fpm \
+    php8.5-common \
+    php8.5-dev \
+    php8.5-cli \
+    php8.5-amqp \
+    php8.5-apcu \
+    php8.5-memcached \
+    php8.5-curl \
+    php8.5-ctype \
+    php8.5-iconv \
+    php8.5-tokenizer \
+    php8.5-mbstring \
+    php8.5-imap \
+    php8.5-xml \
+    php8.5-simplexml \
+    php8.5-xmlwriter \
+    php8.5-xmlrpc \
+    php8.5-xsl \
+    php8.5-zip \
+    php8.5-bz2 \
+    php8.5-posix \
+    php8.5-intl \
+    php8.5-pdo \
+    php8.5-mysql \
+    php8.5-pgsql \
+    php8.5-sqlite3 \
+    php8.5-soap \
+    php8.5-gd \
+    php8.5-gmp \
+    php8.5-ldap \
+    php8.5-bcmath \
+    php8.5-xdebug \
     && apt-get autoremove -y \
     && apt-get clean
 
 RUN mkdir -p /run/php/ && \
-    touch /run/php/php8.4-fpm.pid && \
-    chown $USER_ID:www-data /run/php/php8.4-fpm.pid
+    touch /run/php/php8.5-fpm.pid && \
+    chown $USER_ID:www-data /run/php/php8.5-fpm.pid
 
 # Enable CLI debuging
 RUN echo 'php -dxdebug.client_host=$REMOTE_HOST $@' > /usr/local/bin/php_debug \
@@ -102,5 +101,5 @@ RUN wget https://get.symfony.com/cli/installer -O - | bash && \
 
 WORKDIR /var/www
 
-CMD ["php-fpm8.4", "-F"]
+CMD ["php-fpm8.5", "-F"]
 EXPOSE 9000 9001 9003
