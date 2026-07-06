@@ -40,7 +40,8 @@ RUN apt-get update && \
 
 # PHP
 RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
-    apt-get update && \
+    echo 'Acquire::AllowReleaseInfoChange::Label "true";' > /etc/apt/apt.conf.d/99allow-releaseinfo-change-label && \
+    apt-get update --allow-releaseinfo-change && \
     apt-get install -y \
     php8.4-fpm \
     php8.4-common \
