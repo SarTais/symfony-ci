@@ -75,6 +75,7 @@ RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
     php8.4-gmp \
     php8.4-ldap \
     php8.4-bcmath \
+    php8.4-protobuf \
     php8.4-xdebug \
     && apt-get autoremove -y \
     && apt-get clean
